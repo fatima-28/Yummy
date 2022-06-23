@@ -1,0 +1,512 @@
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pages {
+    display: flex;
+    justify-content: space-evenly;
+
+    .pages-item {
+        margin-top: 10px;
+        margin-right: 25px;
+
+        p {
+            text-transform: capitalize;
+            font-family: $font ;
+            font-weight: 700;
+            font-size: 20px;
+            color: rgb(165, 165, 165);
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+.logo-item {
+    font-weight: 700;
+    font-size: 30px;
+    font-family: $font;
+}
+
+.pages-item {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-top: 10px;
+
+}
+
+.pages-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #b80000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.pages-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.point {
+    display: inline-block;
+    font-size: 50px;
+    color: #b80000;
+}
+
+.logo-item {
+    display: inline-block;
+
+}
+
+.book-button {
+    margin-top: 10px;
+    background-color: #b80000;
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font;
+    font-weight: 700;
+
+    &:hover {
+        background-color: #c01a1a;
+    }
+
+}
+
+.navbar {
+    position: fixed;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.logo {
+    margin-right: 100px;
+}
+
+.pages {
+    margin-right: 100px;
+}
+
+.down-angle {
+    color: black !important;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.dropdown-first {
+    position: absolute;
+}
+
+ul {
+    list-style: none;
+}
+
+.dropdown {
+    z-index: 4;
+
+    .dropdown-first {
+        z-index: 4;
+
+        .dropdown-first-inner {
+            margin-top: 20px;
+            width: 200px;
+            display: none;
+            z-index: 4;
+
+            ul {
+                li {
+                    font-size: 20px;
+                    font-family: $font;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+
+    }
+
+    &:hover {
+        .dropdown-first {
+            .dropdown-first-inner {
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+.hamburger {
+    display: none;
+    margin-left: 120px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 1200px)and (max-width: 1250px) {
+    .navbar {
+
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (min-width: 1100px)and (max-width: 1200px) {
+    .navbar {
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .pages {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+
+    }
+
+    .book-button {
+        margin-left: 80px;
+    }
+}
+
+.foods {
+
+    min-height: 500px;
+    background-color: gainsboro;
+}
+
+.navbar {
+    background-color: white;
+    width: 100%;
+}
+
+.dropdown-first-inner {
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.foods {
+    display: flex;
+    justify-content: space-evenly;
+
+    .food-image {
+        margin-top: 100px;
+        margin-bottom: 50px;
+
+        img {
+
+            width: 500px;
+            height: 500px;
+        }
+    }
+}
+
+
+.food-title {
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.foods-item {
+    z-index: 3;
+}
+
+.food-summary {
+    margin-top: 200px;
+    margin-right: 250px;
+
+}
+
+.food-title {
+    font-family: 'Amatic SC', cursive;
+}
+
+.food-description {
+    font-size: 20px;
+    font-family: $font;
+}
+
+.buttons {
+    display: flex;
+}
+
+.play {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 40px;
+    color: #b80000;
+    cursor: pointer;
+
+    &:hover {
+        color: #c01a1a;
+    }
+}
+
+.video {
+    display: flex;
+
+    p {
+        margin-left: 10px;
+        margin-top: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+    }
+}
+
+.our-menu {
+    color: rgb(190, 190, 190);
+    font-family: $font;
+}
+
+.our-menu-part {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.our-menu-title {
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.our-menu-part-title {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.category {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    .category-item {
+        margin-right: 20px;
+        font-family: $font;
+        font-size: 25px;
+        color: rgb(172, 172, 172);
+        cursor: pointer;
+        transition: 1s;
+
+        &:hover {
+            color: #b80000;
+        }
+
+        p {
+            position: relative;
+        }
+
+        p:after {
+            position: absolute;
+            content: '';
+            height: 2px;
+
+            bottom: -4px;
+
+
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #b80000;
+
+            /* optional animation */
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+
+    }
+
+    .category-item:first-child {
+        color: #b80000;
+    }
+}
+
+.row {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.products-items-inner {
+    margin-left: 30px;
+
+    width: 250px;
+    height: 350px;
+    margin-bottom: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    img {
+        width: 100%;
+    }
+}
+
+.all-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.food-name {
+    text-align: center;
+    font-size: 25px;
+    font-family: $font;
+    font-weight: 700;
+}
+
+.food-text {
+    text-align: center;
+    font-size: 18px;
+    font-family: $font;
+    color: rgb(172, 172, 172);
+    font-weight: 500;
+}
+
+.food-price {
+    color: #b80000;
+    text-align: center;
+    font-size: 25px;
+    font-family: $font;
+    font-weight: 700;
+}
+
+.form {
+    display: flex;
+
+}
+
+.form-boxes {
+    display: flex;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.form-img {
+
+    width: 400px;
+    height: 500px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.form-input {
+
+    width: 700px;
+    height: 500px;
+    background-color: rgb(243, 243, 243);
+}
+
+.form-input-inner {
+    input {
+        width: 200px;
+        height: 50px;
+        margin-top: 70px;
+        margin-left: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #b80000;
+
+    }
+}
+
+.area {
+    margin-top: 25px !important;
+    margin-left: 20px !important;
+    width: 650px !important;
+    height: 100px !important;
+}
+
+.button-form {
+    margin-left: 250px;
+}
+
+.footer-part {
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    min-height: 100px;
+
+    .footer-item {
+        margin-top: 30px;
+
+        width: 300px;
+        height: 200px;
+        padding: 10px;
+        box-sizing: border-box;
+
+        h2 {
+            color: white;
+            text-align: center;
+            font-family: $font;
+            font-size: 30px;
+        }
+
+        p {
+            color: white;
+            text-align: start;
+            font-family: $font;
+            font-size: 17px;
+            margin-left: 50px;
+        }
+    }
+
+}
+
+.icons {
+    margin-top: 20px;
+    margin-left: 60px;
+
+    i {
+        color: white;
+        cursor: pointer;
+        margin-right: 10px;
+        font-size: 25px;
+    }
+}
+
+.footer-part-inner-last {
+    display: flex;
+    justify-content: center;
+
+    p {
+        margin-left: 400px;
+    }
+}

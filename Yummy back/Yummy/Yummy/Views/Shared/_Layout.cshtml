@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/assets/css/main.css">
+    <title>Yummy</title>
+</head>
+
+<body>
+
+    <!-- HEADER START -->
+    <header>
+        <nav class="navbar">
+            <div class="header-part logo">
+                <p class="logo-item">Yummy
+                <p class="point">.</p>
+                </p>
+            </div>
+            <div class="header-part pages">
+                <div class="pages-item active">
+                    <p style="color: black ">Home</p>
+                </div>
+                <div class="pages-item">
+                    <p>about</p>
+                </div>
+                <div class="pages-item">
+                    <p>Menu</p>
+                </div>
+                <div class="pages-item">
+                    <p>Events</p>
+                </div>
+
+                <div class="pages-item">
+                    <p>Chefs</p>
+                </div>
+                <div class="pages-item">
+                    <p>Galerry</p>
+                </div>
+                <div class="pages-item dropdown">
+                    <p>Drop Down<i class="fa-solid fa-angle-down down-angle"></i></p>
+                    <div class="dropdown-first">
+                        <div class="dropdown-first-inner">
+                            <ul>
+                                <li>DropDown 1</li>
+                                <li>DropDown 1</li>
+                                <li>DropDown 1</li>
+                                <li>
+                                    DropDown Dropdon
+                                </li>
+                                <li>DropDown 1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pages-item">
+                    <p>Contacs</p>
+                </div>
+            </div>
+            <div class="header-part book-button">
+                <p class="book-table">Book A Table</p>
+            </div>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- HEADER END -->
+
+    @RenderBody()
+
+    <!-- footer start -->
+    <footer>
+        <div class="footer">
+            <div class="footer-part">
+                <div class="footer-item">
+                    <h2>Adress</h2>
+                    <p>
+                        A108 Adam Street <br>
+                        New York, NY 535022 - US
+                    </p>
+                </div>
+                <div class="footer-item">
+                    <h2>Reservations</h2>
+                    <p>Lorem ipsum dolor sit amet Lorem ipsum dolor <br> sit amet Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="footer-item">
+                    <h2>Opening house</h2>
+                    <p>
+                        Phone: +1 5589 55488 55 <br>
+                        Email: info@example.com
+                    </p>
+                </div>
+                <div class="footer-item">
+                    <h2>Follow us</h2>
+                    <div class="icons">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-part">
+                <div class="footer-part-inner-last">
+                    <p style="color: rgb(172, 172, 172); font-size: 20px;">
+                        © Copyright Yummy. All Rights Reserved <br>
+                        Designed by BootstrapMade
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer END -->
+</body>
+
+</html>

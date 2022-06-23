@@ -1,0 +1,135 @@
+﻿@using Yummy.Models
+@using Yummy.ViewModels
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- MAIN START -->
+<main>
+    <!-- foods section START -->
+    <section id="foods">
+        <div class="foods">
+            <div class="foods-item food-summary">
+                <p class="food-title">
+                    Enjoy Your Healthy<br>
+                    Delicious Food
+                </p>
+                <p class="food-description">
+                    Sed autem laudantium Voluptatem itaque ea consequatur<br> eveniet.
+
+                    Eum quas beatae cumque eum quaerat.
+                </p>
+                <div class="buttons">
+                    <div class="header-part book-button">
+                        <p class="book-table">Book A Table</p>
+                    </div>
+                    <div class="video">
+                        <i class="fa-solid fa-circle-play play"></i>
+                        <p>Watch Video</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="foods-item food-image">
+                <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/hero-img.png" alt="food">
+            </div>
+        </div>
+    </section>
+    <!-- foods section end -->
+    <!-- products menu section start -->
+    <section id="products">
+        <div class="products-item ">
+            <div class="our-menu-part">
+                <p class="our-menu">OUR MENU</p>
+            </div>
+            <div class="our-menu-part-title">
+                <p class="our-menu-title">Check Our Yummy Menu</p>
+            </div>
+
+        </div>
+        <div class="products-item category">
+            <div class="category-item">
+                <p>Startrers</p>
+            </div>
+            <div class="category-item">
+                <p>Breakfast</p>
+            </div>
+            <div class="category-item">
+                <p>Launch</p>
+            </div>
+            <div class="category-item">
+                <p>Dinner</p>
+            </div>
+        </div>
+        <div class="products-item all-products">
+
+       
+                @foreach (var product in Model.Products)
+                {
+
+                    <!-- product single item start -->
+                    <div class="row">
+                        <div class="products-items-inner">
+                            <img src="@product.Image"
+                                 alt="food">
+                            <p class="food-name">@product.Title</p>
+                            <p class="food-text">@product.Description</p>
+                            <p class="food-price">$@product.Price</p>
+                        </div>
+                        
+                       
+                    </div>
+                    <!-- product single item end -->
+                }
+
+
+            </div>
+    </section>
+    <!-- products menu section end -->
+    <!-- form section start -->
+    <section id="form">
+        <div class="form-part">
+            <div class="form-part-item form-title">
+                <div class="products-item ">
+                    <div class="our-menu-part">
+                        <p class="our-menu">BOOK A TABLE</p>
+                    </div>
+                    <div class="our-menu-part-title">
+                        <p class="our-menu-title">Book Your Stay With Us</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-part-item form-boxes">
+                <div class="form-box-items form-img">
+                    <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/reservation.jpg"
+                         alt="flower">
+                </div>
+                <div class="form-box-items form-input">
+                    <div class="form-input-inner">
+                        <input type="text" placeholder="Your Name">
+                        <input type="text" placeholder="Your Phone">
+                        <input type="text" placeholder="Your Email">
+                    </div>
+                    <div class="form-input-inner">
+                        <input type="text" placeholder="Your Name">
+                        <input type="text" placeholder="Your Phone">
+                        <input type="text" placeholder="Your Email">
+                    </div>
+                    <div class="form-input-inner">
+                        <input type="text" class="area">
+
+                    </div>
+                    <div class="form-input-inner">
+                        <div class="header-part book-button button-form">
+                            <p class="book-table">Book A Table</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- form section end -->
+</main>
+<!-- MAIN END -->
