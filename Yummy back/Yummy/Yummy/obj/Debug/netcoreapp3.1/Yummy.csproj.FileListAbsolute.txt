@@ -303,3 +303,10 @@ C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\obj\Debug\netcoreapp3.1\Yummy.
 C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\obj\Debug\netcoreapp3.1\Yummy.csproj.CopyComplete
 C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\obj\Debug\netcoreapp3.1\Yummy.genruntimeconfig.cache
 C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Product\Create.cshtml.g.cs
+C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Product\Update.cshtml.g.cs
+C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\mac\Desktop\Yummy\Yummy back\Yummy\Yummy\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs

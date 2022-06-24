@@ -24,18 +24,18 @@ namespace Yummy.Areas.AdminPanel.Controllers
         }
         public async Task<IActionResult> Delete(int? Id)
         {
-            if (Id==null)
+            if (Id == null)
             {
                 return BadRequest();
 
             }
             var productDb = _context.Products.Where(p => !p.IsDeleted).FirstOrDefault(p => p.Id == Id);
-            if (productDb==null)
+            if (productDb == null)
             {
                 return NotFound();
             }
             productDb.IsDeleted = true;
-           await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
@@ -43,5 +43,82 @@ namespace Yummy.Areas.AdminPanel.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Product product)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            bool IsExist = _context.Products.Where(p => !p.IsDeleted).Any(p => p.Title.ToLower() == product.Title.ToLower());
+            if (IsExist)
+            {
+                ModelState.AddModelError("Title", $"{product.Title} is already exist!");
+                return View();
+            }
+            if (product.Description.Length < 10)
+            {
+                ModelState.AddModelError("Description", $"{product.Description} must be at least 10 character!");
+                return View();
+            }
+
+
+            await _context.AddAsync(product);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Update(int? Id)
+        {
+            if (Id == null)
+            {
+                return BadRequest();
+            }
+            var productDb = _context.Products.Where(p => !p.IsDeleted).FirstOrDefault(p => p.Id == Id);
+            if (productDb == null)
+            {
+                return NotFound();
+
+            }
+            return View(productDb);
+
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task< IActionResult> Update(int? Id, Product product)
+        {
+            if (Id == null)
+            {
+                return BadRequest();
+            }
+            var productDb = _context.Products.Where(p => !p.IsDeleted).FirstOrDefault(p => p.Id == Id);
+            if (productDb == null)
+            {
+                return NotFound();
+
+            }
+            bool IsExist = _context.Products.Where(p => !p.IsDeleted).Any(p => p.Title.ToLower() == product.Title.ToLower());
+            if (IsExist)
+            {
+                ModelState.AddModelError("Title", $"{product.Title} is already exist!");
+                return View();
+            }
+            if (product.Description.Length < 10)
+            {
+                ModelState.AddModelError("Description", $"{product.Description} must be at least 10 character!");
+                return View();
+            }
+
+            product.Title = productDb.Title;
+            product.Description = productDb.Description;
+            product.Price = productDb.Price;
+            await _context.SaveChangesAsync();
+            return RedirectToAction();
+
+
+        }
+
     }
+
 }
