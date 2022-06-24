@@ -6,17 +6,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Yummy.Models
+namespace Yummy.ViewModels.ProductsVM
 {
-    public class Product
+    public class ProductsVM
     {
+
         public int Id { get; set; }
-        public string Image { get; set; }
+        [Required(ErrorMessage = "Name is required")]
         public string Title { get; set; }
+        [Required(ErrorMessage = "Description is required")]
         public string Description { get; set; }
+        [Required(ErrorMessage = "Price is required")]
         public double Price { get; set; }
-        [NotMapped,Required]
+        [NotMapped, Required(ErrorMessage ="Photo is required")]
         public IFormFile Photo { get; set; }
-        public bool IsDeleted { get; set; }
+        
     }
 }
